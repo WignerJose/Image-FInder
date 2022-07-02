@@ -18,7 +18,7 @@ function App() {
           initialValues={{ search: '' }}
           onSubmit={async values => {
             const response = await fetch(`https://api.unsplash.com/search/photos?per_page=20&query=${values.search}`,
-              { headers: { 'Authorization': 'Client-ID xap_hkeeVznheULW_OiKDhjmmskkdYrV_Om4lY-mgLA' } })
+              { headers: { 'Authorization': 'Client-ID ' } })
               const data = await response.json()
             setPhotos(data.results)
           }}
